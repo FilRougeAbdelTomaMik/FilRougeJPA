@@ -1,0 +1,9 @@
+<h2>Rechercher des Employés</h2>
+<input type="text" (input)="handleInput($event)" placeholder="Rechercher par nom">
+<ul>
+  <li *ngFor="let employe of employes">
+    {{ employe.nom }} {{ employe.prenom }}
+    <button (click)="editEmploye(employe)">Modifier</button>
+    <button (click)="deleteEmploye(employe.id)">Supprimer</button>
+  </li>
+</ul>
